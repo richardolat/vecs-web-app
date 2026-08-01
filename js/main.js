@@ -26,12 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var heroSlides = document.querySelectorAll('#hero-slides .hero-slide');
   var dotsWrap = document.getElementById('hero-dots');
   if (heroSlides.length) {
-    var validSlides = [];
-    heroSlides.forEach(function (img, i) {
+    heroSlides.forEach(function (img) {
       img.addEventListener('error', function () {
         img.style.display = 'none';
       });
-      validSlides.push(img);
     });
 
     // Build dots
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dotsWrap.appendChild(dot);
     });
 
-    var current = 0;
+    var currentSlide = 0;
     function showSlide(index) {
       heroSlides.forEach(function (img, i) {
         img.classList.toggle('active', i === index);
@@ -51,10 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
       dotsWrap.querySelectorAll('button').forEach(function (dot, i) {
         dot.classList.toggle('active', i === index);
       });
-      current = index;
+      currentSlide = index;
     }
     setInterval(function () {
-      var next = (current + 1) % heroSlides.length;
+      var next = (currentSlide + 1) % heroSlides.length;
       showSlide(next);
     }, 6000);
   }
@@ -66,26 +64,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Simple contact form handler -> mailto fallback (no backend required)
-  var form = document.querySelector('form.enquiry');
+  // Contact form -> submits to Formspree (see README for one-time setup)
+  var form = document.getElementById('contact-form');
+  var statusBox = document.getElementById('form-status');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var name = form.querySelector('#name').value;
-      var email = form.querySelector('#email').value;
-      var industry = form.querySelector('#industry').value;
-      var engagement = form.querySelector('#engagement').value;
-      var message = form.querySelector('#message').value;
+      var data = new FormData(form);
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
 
-      var subject = encodeURIComponent('New enquiry from ' + name + ' (' + industry + ')');
-      var body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Industry: ' + industry + '\n' +
-        'Engagement type: ' + engagement + '\n\n' +
-        'Message:\n' + message
-      );
-      window.location.href = 'mailto:leadstrategist@veritaseagles.org?subject=' + subject + '&body=' + body;
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            statusBox.style.display = 'block';
+            statusBox.style.background = '#E8F5E9';
+            statusBox.style.color = '#1B5E20';
+            statusBox.textContent = "Thanks — your message has been sent. We'll be in touch shortly.";
+            form.reset();
+          } else {
+            throw new Error('Submission failed');
+          }
+        })
+        .catch(function () {
+          statusBox.style.display = 'block';
+          statusBox.style.background = '#FDECEA';
+          statusBox.style.color = '#B3261E';
+          statusBox.innerHTML = "Something went wrong sending this. Please email us directly at " +
+            "<a href=\"mailto:leadstrategist@veritaseagles.org\" style=\"text-decoration:underline;\">leadstrategist@veritaseagles.org</a>.";
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message \u2192';
+        });
     });
   }
 });

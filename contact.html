@@ -81,21 +81,23 @@
       </div>
     </div>
 
-    <form class="enquiry">
+    <form class="enquiry" id="contact-form" action="https://formspree.io/f/xjgnqarb" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry from veritaseagles.org">
+      <div id="form-status" style="display:none; padding:14px 16px; border-radius:8px; margin-bottom:18px; font-size:0.92rem;"></div>
       <div class="two-field">
         <div class="form-row">
           <label for="name">Full Name</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" required>
         </div>
         <div class="form-row">
           <label for="email">Email Address</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
         </div>
       </div>
       <div class="two-field">
         <div class="form-row">
           <label for="industry">Industry</label>
-          <select id="industry">
+          <select id="industry" name="industry">
             <option>Government / Public Sector</option>
             <option>Financial Services</option>
             <option>Oil &amp; Gas / Energy</option>
@@ -109,7 +111,7 @@
         </div>
         <div class="form-row">
           <label for="engagement">Engagement Type</label>
-          <select id="engagement">
+          <select id="engagement" name="engagement">
             <option>Media &amp; Public Relations</option>
             <option>Branding &amp; Corporate Communication</option>
             <option>Digital &amp; Social Media Management</option>
@@ -122,7 +124,7 @@
       </div>
       <div class="form-row">
         <label for="message">Tell Us About Your Project</label>
-        <textarea id="message" required></textarea>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button type="submit" class="btn btn--navy" style="width:100%; justify-content:center;">Send Message &rarr;</button>
     </form>
