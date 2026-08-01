@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F3050"/>
+      <stop offset="100%" stop-color="#071B30"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="640" fill="url(#bg2)"/>
+
+  <!-- podium/lectern -->
+  <path d="M660 640 L660 420 L780 420 L800 640 Z" fill="#0B2A4A" stroke="#16416B" stroke-width="2"/>
+  <rect x="700" y="380" width="40" height="50" rx="4" fill="#16416B"/>
+
+  <!-- speaker silhouette -->
+  <ellipse cx="720" cy="330" rx="58" ry="130" fill="#0B2A4A"/>
+  <circle cx="720" cy="180" r="40" fill="#0B2A4A"/>
+
+  <!-- microphones fanned toward podium -->
+  <g stroke="#C99A2E" stroke-width="4" opacity="0.85">
+    <line x1="180" y1="600" x2="640" y2="430"/>
+    <line x1="320" y1="620" x2="660" y2="440"/>
+    <line x1="1260" y1="600" x2="800" y2="430"/>
+    <line x1="1120" y1="620" x2="780" y2="440"/>
+    <line x1="60" y1="560" x2="620" y2="450"/>
+    <line x1="1380" y1="560" x2="820" y2="450"/>
+  </g>
+  <g fill="#E4C468">
+    <circle cx="180" cy="600" r="10"/>
+    <circle cx="320" cy="620" r="10"/>
+    <circle cx="1260" cy="600" r="10"/>
+    <circle cx="1120" cy="620" r="10"/>
+    <circle cx="60" cy="560" r="9"/>
+    <circle cx="1380" cy="560" r="9"/>
+  </g>
+
+  <!-- camera flash bursts -->
+  <g fill="#E4C468" opacity="0.6">
+    <circle cx="240" cy="200" r="4"/>
+    <circle cx="1200" cy="160" r="3"/>
+    <circle cx="340" cy="120" r="3"/>
+    <circle cx="1100" cy="260" r="4"/>
+  </g>
+  <g stroke="#E4C468" stroke-width="1" opacity="0.3">
+    <line x1="220" y1="180" x2="260" y2="220"/>
+    <line x1="260" y1="180" x2="220" y2="220"/>
+    <line x1="1180" y1="140" x2="1220" y2="180"/>
+    <line x1="1220" y1="140" x2="1180" y2="180"/>
+  </g>
+
+  <!-- gold backdrop band with brand mark motif -->
+  <rect x="0" y="0" width="1440" height="70" fill="#0B2A4A" opacity="0.9"/>
+  <g fill="#16416B">
+    <rect x="0" y="0" width="1440" height="70"/>
+  </g>
+  <g fill="#E4C468" opacity="0.15">
+    <text x="60" y="45" font-family="Georgia, serif" font-size="28" font-weight="bold">VECS</text>
+    <text x="360" y="45" font-family="Georgia, serif" font-size="28" font-weight="bold">VECS</text>
+    <text x="660" y="45" font-family="Georgia, serif" font-size="28" font-weight="bold">VECS</text>
+    <text x="960" y="45" font-family="Georgia, serif" font-size="28" font-weight="bold">VECS</text>
+    <text x="1260" y="45" font-family="Georgia, serif" font-size="28" font-weight="bold">VECS</text>
+  </g>
+</svg>

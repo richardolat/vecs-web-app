@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#E4C468" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E4C468" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="640" fill="url(#glow)"/>
+
+  <!-- broadcast arcs -->
+  <g stroke="#E4C468" stroke-width="1.5" fill="none" opacity="0.5">
+    <circle cx="1120" cy="190" r="60"/>
+    <circle cx="1120" cy="190" r="120"/>
+    <circle cx="1120" cy="190" r="180"/>
+    <circle cx="1120" cy="190" r="240"/>
+    <circle cx="1120" cy="190" r="300"/>
+  </g>
+
+  <!-- network nodes / lines -->
+  <g stroke="#F7F8FA" stroke-width="1" opacity="0.28">
+    <line x1="120" y1="480" x2="340" y2="360"/>
+    <line x1="340" y1="360" x2="560" y2="440"/>
+    <line x1="340" y1="360" x2="420" y2="180"/>
+    <line x1="560" y1="440" x2="760" y2="360"/>
+    <line x1="420" y1="180" x2="640" y2="120"/>
+    <line x1="760" y1="360" x2="960" y2="420"/>
+    <line x1="640" y1="120" x2="880" y2="160"/>
+  </g>
+  <g fill="#C99A2E">
+    <circle cx="120" cy="480" r="4"/>
+    <circle cx="340" cy="360" r="5"/>
+    <circle cx="560" cy="440" r="4"/>
+    <circle cx="420" cy="180" r="4"/>
+    <circle cx="760" cy="360" r="5"/>
+    <circle cx="640" cy="120" r="4"/>
+    <circle cx="960" cy="420" r="4"/>
+    <circle cx="880" cy="160" r="4"/>
+  </g>
+
+  <!-- diagonal skyline-ish bars, abstract -->
+  <g fill="#0F3050" opacity="0.6">
+    <rect x="980" y="420" width="26" height="220"/>
+    <rect x="1020" y="360" width="26" height="280"/>
+    <rect x="1060" y="400" width="26" height="240"/>
+    <rect x="1100" y="320" width="26" height="320"/>
+    <rect x="1140" y="380" width="26" height="260"/>
+    <rect x="1180" y="440" width="26" height="200"/>
+  </g>
+</svg>

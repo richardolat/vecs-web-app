@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1440 640" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16416B"/>
+      <stop offset="100%" stop-color="#0B2A4A"/>
+    </linearGradient>
+    <linearGradient id="sun3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E4C468" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E4C468" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="640" fill="url(#bg3)"/>
+  <circle cx="1140" cy="220" r="220" fill="url(#sun3)"/>
+
+  <!-- Lagos-style skyline silhouette -->
+  <g fill="#071B30">
+    <rect x="0" y="420" width="90" height="220"/>
+    <rect x="100" y="360" width="70" height="280"/>
+    <rect x="180" y="440" width="60" height="200"/>
+    <rect x="250" y="320" width="90" height="320"/>
+    <rect x="350" y="400" width="70" height="240"/>
+    <rect x="430" y="280" width="100" height="360"/>
+    <rect x="540" y="380" width="65" height="260"/>
+    <rect x="615" y="340" width="80" height="300"/>
+    <rect x="705" y="420" width="60" height="220"/>
+    <rect x="775" y="300" width="95" height="340"/>
+    <rect x="880" y="380" width="70" height="260"/>
+    <rect x="960" y="260" width="110" height="380"/>
+    <rect x="1080" y="420" width="60" height="220"/>
+    <rect x="1150" y="360" width="80" height="280"/>
+    <rect x="1240" y="440" width="65" height="200"/>
+    <rect x="1315" y="300" width="90" height="340"/>
+  </g>
+
+  <!-- window lights -->
+  <g fill="#E4C468" opacity="0.5">
+    <rect x="260" y="360" width="6" height="6"/>
+    <rect x="280" y="400" width="6" height="6"/>
+    <rect x="450" y="320" width="6" height="6"/>
+    <rect x="470" y="380" width="6" height="6"/>
+    <rect x="800" y="340" width="6" height="6"/>
+    <rect x="820" y="400" width="6" height="6"/>
+    <rect x="980" y="300" width="6" height="6"/>
+    <rect x="1000" y="360" width="6" height="6"/>
+    <rect x="1330" y="340" width="6" height="6"/>
+  </g>
+
+  <!-- broadcast signal arcs rising from a tower -->
+  <line x1="990" y1="260" x2="990" y2="120" stroke="#E4C468" stroke-width="3"/>
+  <g stroke="#E4C468" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M950 160 Q990 100 1030 160"/>
+    <path d="M925 190 Q990 90 1055 190"/>
+    <path d="M900 220 Q990 80 1080 220"/>
+  </g>
+
+  <!-- foreground horizon glow -->
+  <rect x="0" y="630" width="1440" height="10" fill="#C99A2E" opacity="0.4"/>
+</svg>
